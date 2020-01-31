@@ -385,33 +385,81 @@ accessed via a web browser.</li>
                         _JSON/get_DQ_L_MDM_GOLD_REC_JSON/”-v –u USA/username:password</span>
                  </code></figure>
                  <br>
-                 <!--
-                 <hr>
+                 
 
-                 <p style="color: #333366">GET REQUEST URL from CAT Environment for JSON full extract<br>
-                    JSON GET REQUEST with VIPs<br>
+                 <p style="color: #333366">XML FORMAT<br>
                      <div class="bd-clipboard">
                          <span class="btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</span></div><figure class="highlight">
                     
                      <code class="language-html" data-lang="html">
-                     <span class="nt">curl
-                        “https://edqcat.usps.gov/DataIntegrationService/RestService/REST_get_DQ_L_MDM_GOLD_R
-                        EC_JSON/get_DQ_L_MDM_GOLD_REC_JSON/ -v –u USA/username:password”</span>
-                     </code></figure>
-                     Disclaimer: You can run this URL with any of your preferred methods. To keep the password, please use any secure file process
-like a script etc.
-                     <br>-->
-                     
-
+                     <span class="nt">Curl -x proxy.usps.gov:8080 “https://edq.usps.gov/DataIntegrationService/RestService/REST_get_DQ_L_MDM_GOLD_REC_XML/get_DQ_L_MDM_GOLD_REC_XML/”-v –u USA/username:password</span>
+                     </code></figure> 
               </div>
               <div class="col-4">
-                    <p style="color: #333366"><font size="5.5"><b>Quick Links</b></font></p>
+                    <p style="color: #333366"><font size="5.5"><b>Quick Links</font></p>
 <br>
 <i class="fas fa-file-pdf"></i>
-<a href="Docs/" target="_blank"> EDM APIs For Facility Golden Records- Setup for test environment</a>
+<a href="assets/Docs/EDM APIs For Facility Golden Records- Setup for test environment.pdf" target="_blank"> EDM APIs For Facility Golden Records-Setup for test environment</a>
 <p></p>
 <i class="fas fa-file-pdf"></i>
-<a href="Docs/" target="_blank"> EDM APIs For Facility Golden Records-user guide for Production setup</a>
+<a href="assets/Docs/EDM APIs For Facility Golden Records-user guide for Production setup.pdf" target="_blank"> EDM APIs For Facility Golden Records-User guide for production setup</a>
+<p></p>
+<i class="fas fa-file-pdf"></i>
+<a href="assets/Docs/Common REST API Response Status.pdf" target="_blank"> Common REST API Response Status Codes</a>
+<br>
+<hr>
+<p style="color: #333366"><font size="5.5"><b>Downloads & Resources</font></p>
+<p style="color: #333366"><font size="4"><b>Sample Files</font></p>
+    <img src="assets/images/JSONicon.svg"> <a href="assets/Docs/Sample Facility Golden_Record_JSON_File.json" target="_blank"> JSON File</a>
+<p></p>
+<img src="assets/images/XMLicon.svg"> <a href="assets/Docs/Sample Facility Golden_Record_XML_File.XML" target="_blank"> XML File</a>
+<p></p>
+<img src="assets/images/CSVicon.svg"> <a href="assets/Docs/Sample Facility Golden_Record_CSV_File.csV" target="_blank"> Comma Separated Values File</a>
+<p></p><!--
+<img src="assets/images/RDFicon.svg"> <a href="#" target="_blank"> RDF File</a>-->
+
+<p style="color: #333366"><font size="5.5"><b>Additional Information</font></p>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Resource Type</th>
+      <th scope="col">Dataset/Golden Records</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">Metadata Created Date</th>
+      <td>2/1/2020</td>
+    </tr>
+    <tr>
+      <th scope="row">Metadata Updated Date</th>
+      <td>2/1/2020</td>
+    </tr>
+    <tr>
+      <th scope="row">Publisher</th>
+      <td>EDM</td>
+    </tr>
+    <tr>
+      <th scope="row">Maintainer</th>
+      <td>EDM</td>
+    </tr>
+    <tr>
+      <th scope="row">Maintainer Email</th>
+      <td></td>
+    </tr>
+
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+
 
               </div>
             </div>
@@ -433,12 +481,12 @@ like a script etc.
     <div class="container">
             <div class="row">
                 <div class="col-6"><p style="color: #333366">
-                        <a href="http://edm.usps.gov/ContactUs.html" button type="button" class="btn btn-primary btn-lg">Let's Talk</a>
-                </div>
-                <div class="col-6"><p style="color: #333366">
                         For more information concerning your Location domain implementation needs reach out to:<br>
                        <li>Doug Shumway: (202) 268-2617, <a href="mailto:Douglas.R.Shumway@usps.gov">Douglas.R.Shumway@usps.gov</a></li>
                         <li>Justin Abraham: (919) 501-9624, <a href="mailto:Justin.P.Abraham@usps.gov">Justin.P.Abraham@usps.gov</a></li>
+                </div>
+                <div class="col-6"><p style="color: #333366">
+                        <a href="http://edm.usps.gov/ContactUs.html" button type="button" class="btn btn-primary btn-lg">Let's Talk</a>
                 </div>
             </div>
         </div>
@@ -453,10 +501,6 @@ like a script etc.
     </section>
     </div>
     <!--main section end-->
-
-
-
-
 
 
 
