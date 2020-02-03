@@ -313,7 +313,7 @@ margin-top: -4rem;
                         <div class="row justify-content-center">
                    
     
-                                    <h2>EDM Web services and APIs</h2>
+                                    <h2>EDM Web services and APIs FAQ</h2>
                                 </div>
                           
                         </div>
@@ -334,156 +334,33 @@ margin-top: -4rem;
         </div>
 
         <div class="container">
-            <div class="row">
-                <div class="col-8">
+                <div class="col">
                         <p style="color: #333366"><font size="5.5">
-                            <b>Facility Golden Record API</font><br>About the API</b></p>
+                            <b>FAQ</font></p>
                             <p style="color: #333366">
-                        EDM has rolled out a “Single Source of truth” for Facility master data, and it is now available for
-use. This Single Source of Truth – also known as a “Golden Record” – has established
-consistent Facility names, addresses, finance numbers and other related Facility data elements.
-This was achieved through collaboration with multiple system owners in determining the
-authoritative source for each data element, and it is intended to provide business systems with
-higher confidence and a standardized corporate perspective with respect to Facility data.</p><p style="color: #333366">
-Similarly, the EDM team is planning the development of Golden Records for the Customer,
-    Asset, and Product data domains as well.</p>
-    <p></p>
-    <p style="color: #333366"><b>How to consume the Facility data thru an API for golden records?</b></p>
-        <p style="color: #333366">EDM developed an API for the consumers who want to access the facility golden records.</p>
-    <ol>
-<li>The Facility data API is available in 2 formats:</li>
-<ol><font color="#333366">a. JSON</font></ol>
-<ol><font color="#333366">b. XML</font></ol>
-<li>The URL can be called using Curl command line tool/utility or via any interface that can
-consume a Rest web service.</li>
-<li>A method for making API Get requests such as cURL(a command line utility) is installed and running.</li>
-</ol>
-<p style="color: #333366"><b>Prerequisite for API access</b></p>
-<ol>
-<li>A Request in the EAccess for service account by the source application</li>
-<ol><font color="#333366">a. From eAccess -> Quick Links ->Special Accounts -> Request Service Account -> Windows Domain Service Account –USA</font></ol>
-
-
-<ol><font color="#333366">b. A user should be available in the Informatica EDM DQ tool. (This will be automatically created when the eAccess request approves)</font></ol>
-
-<ol><font color="#333366">c.  Service Account should be mapped to a USER Group (NAT_EDQ_API_FACILITY) in eAccess and EDM DQ tool. (This will be automatically created when the eAccess request approves)</font></ol>
-<ol><font color="#333366">d. The service user should be in the LDAP group(This will be automatically created when the eAccess request approves)</font></ol>
-
-<p style="color: #333366"><font size="4">Note: Please see the <a href="assets/Docs/EDM APIs For Facility Golden Records-user guide for Production setup.pdf" target="_blank">"How to guide"</a>  on the ‘Quick Links’ for how to do eAccess Request for service account for API on Page 6 
-(EDM APIs For Facility Golden Records-User guide for production setup)</font><br>
-
-<li>A method for making API GET requests such as cURL(a command line utility) is installed and running in a Linux server box.</li>
-
-
+                                Q: How often is the golden record data updated?</p></b>
+                                <p style="color: #333366"><b>A-</b> Currently, It is updated on a weekly basis (Every Monday morning)</p>
+<br>
+                                <b><p style="color: #333366">
+                                Q: What if the Facility Data Changes?</p></b>
+                                <p style="color: #333366"><b>A-</b> The changes will be reflected in the weekly updates.</p>
+<br>
+                                <b><p style="color: #333366">
+                                Q: What is the source of the golden record origination?</p></b>
+                                <p style="color: #333366"><b>A-</b> Collaboration of multiple system that includes:</p>
+                                <ol>
+                                <li>AMS</li>
+                                <li>FDB
+                                <li>EFMS
+                                <li>NASSWEB(future)
+                                <li>FEDSTRIP</li>
+                                </ol>
+</div>
+</div>
+</section>
  
-           </ol>
-           <p style="color: #333366"><b>How to Call the API?</b></p>
-                <p style="color: #333366">
-                Below are the GET REQUEST URL for the REST API Calls using cURL command. cURL is a tool to transfer data from or to a server.
-                <ul>
-                <li>Login to your (source system) Linux server.</li>
-                <li>Please run the cURL command line utility as below based on your environment</li></ul>
-                <p style="color: #333366">PRODUCTION<br>
-                GET REQUEST (JSON) FORMAT<br>
-               
-                 <div class="bd-clipboard">
-                     <span class="btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</span></div><figure class="highlight">
-                
-                 <code class="language-html" data-lang="html">
-                 <span class="nt">curl -x proxy.usps.gov:8080 “https://edq.usps.gov/DataIntegrationService/RestService/REST_get_DQ_L_MDM_GOLD_REC
-                        _JSON/get_DQ_L_MDM_GOLD_REC_JSON/”-v –u USA/username:password</span>
-                 </code></figure>
-                 <br>
-                 
 
-                 <p style="color: #333366">XML FORMAT<br>
-                     <div class="bd-clipboard">
-                         <span class="btn-clipboard" title="" data-original-title="Copy to clipboard">Copy</span></div><figure class="highlight">
-                    
-                     <code class="language-html" data-lang="html">
-                     <span class="nt">curl -x proxy.usps.gov:8080 “https://edq.usps.gov/DataIntegrationService/RestService/REST_get_DQ_L_MDM_GOLD_REC_XML/get_DQ_L_MDM_GOLD_REC_XML/”-v –u USA/username:password</span>
-                     </code></figure> 
-              </div>
-              <div class="col-4">
-                    <p style="color: #333366"><font size="5.5"><b>Quick Links</font><br><font size="4.5"><b></b>How to Guide</font></p>
-
-<i class="fas fa-file-pdf"></i>
-<a href="assets/Docs/EDM APIs For Facility Golden Records- Setup for test environment.pdf" target="_blank"> EDM APIs For Facility Golden Records-Setup for test environment</a>
-<p></p>
-<i class="fas fa-file-pdf"></i>
-<a href="assets/Docs/EDM APIs For Facility Golden Records-user guide for Production setup.pdf" target="_blank"> EDM APIs For Facility Golden Records-User guide for production setup</a>
-<p></p>
-<i class="fas fa-file-pdf"></i>
-<a href="assets/Docs/Common REST API Response Status.pdf" target="_blank"> Common REST API Response Status Codes</a>
-<br>
-<br>
-<i class="fas fa-link"></i><a href="#"> FAQ Link</a>
-
-
-
-
-
-
-
-<hr>
-<p style="color: #333366"><font size="5.5"><b>Downloads & Resources</font><br><font size="4.5"><b>Sample Data Set Format</font></p>
-    <img src="assets/images/JSONicon.svg"> <a href="assets/Docs/Sample Facility Golden_Record_JSON_File.json" target="_blank"> JSON File</a>
-<p></p>
-<img src="assets/images/XMLicon.svg"> <a href="assets/Docs/Sample Facility Golden_Record_XML_File.XML" target="_blank"> XML File</a>
-<p></p>
-<img src="assets/images/CSVicon.svg"> <a href="assets/Docs/Sample Facility Golden_Record_CSV_File.csV" target="_blank"> Comma Separated Values File</a>
-<p></p><!--
-<img src="assets/images/RDFicon.svg"> <a href="#" target="_blank"> RDF File</a>-->
-<hr>
-<p style="color: #333366"><font size="5.5"><b>Additional Information</font></p>
-
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th scope="col">Resource Type</th>
-      <th scope="col">Dataset/Golden Records</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">Metadata Created Date</th>
-      <td>2/1/2020</td>
-    </tr>
-    <tr>
-      <th scope="row">Metadata Updated Date</th>
-      <td>2/1/2020</td>
-    </tr>
-    <tr>
-      <th scope="row">Publisher</th>
-      <td>EDM</td>
-    </tr>
-    <tr>
-      <th scope="row">Maintainer</th>
-      <td>EDM</td>
-    </tr>
-    <tr>
-      <th scope="row">Maintainer Email</th>
-      <td><a href="mailto:EDMSupport@usps.gov">EDMSupport@usps.gov</a></td>
-    </tr>
-
-  </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-              </div>
-            </div>
-          </div>
-           
-
-    </section>
+         
     <section class="features15 cid-rlQfIBUxwC" id="features15-q" style="background-color: #ffffff;">
     <div class="container bottomFooter">
         <div class="row">
